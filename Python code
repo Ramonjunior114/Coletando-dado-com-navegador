@@ -1,0 +1,27 @@
+#primeiro instalar as bibliotecas selenium e webdriver-manager
+pip install selenium 
+pip install webdriver-manager
+
+#importar as bibliotecas necessarias
+#Neste exemplo a biblioteca utilizada vai ser para o chrome
+ 
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from webdriver_manager.chrome import ChromeDriverManager
+import time
+
+#agora atribuimos o drive ao webdriver para fornecer os paramestros do google chrome drive
+#sera instalado automaticamente por causa do webdrive_manager
+drive = webdriver.Chrome(ChromeDriveManager().install())
+
+#Aqui vai o link que vai ser acessado no google chrome
+drive.get("https://www.climatempo.com.br")
+
+#Aqui uma pausa para que a pagina seja carregada utilizando o sleep
+time.sleep(5) #5 segundos de espera
+
+#agora coletar a informação do site atraves do ID que esta no codigo HTML da pagina
+tempo = driver.find_element(By.ID, "current-weather-temperature")
+
+#Mostrar o resultado da busca
+print(f"hoje o tempo é de {tempo.text} graus")
