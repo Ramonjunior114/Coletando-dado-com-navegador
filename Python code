@@ -15,6 +15,7 @@ import time
 drive = webdriver.Chrome(ChromeDriveManager().install())
 
 #Aqui vai o link que vai ser acessado no google chrome
+#Neste caso ele vai buscar o tempo do dia no site do clima tempo
 drive.get("https://www.climatempo.com.br")
 
 #Aqui uma pausa para que a pagina seja carregada utilizando o sleep
